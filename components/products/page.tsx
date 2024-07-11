@@ -24,9 +24,9 @@ function Page({datas}:any) {
       console.log(response);
       if(response?.status == 201){
         await getCards({id: Number(Cookies.get('id'))})
-        toast.success('Product added to cart successful')
+        toast.success('karzinkaga qoshildi')
       }else{
-        toast.error('Product added to cart failed You have need login')
+        toast.error('Mahsulot savatga kiritilmadi. Sizga login kerak')
       }
   }
 

@@ -65,7 +65,7 @@ function page() {
             </ul>
           </div>
           <div>
-            <h2 className="text-[18px] font-bold ">ya</h2>
+            <h2 className="text-[18px] font-bold ">Kategoriya</h2>
             <ul className="mt-[20px]">
               <li className="text-[14px] font-medium text-[#240E0099] mb-[16px] hover:text-[black] cursor-pointer">
                 Telivizorlar

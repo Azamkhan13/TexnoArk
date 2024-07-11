@@ -269,17 +269,6 @@ function Index() {
           </div>
 
           <div className="max-sm:block hidden duration-300 px-[20px]">
-            <Button
-              onClick={() => showCategory()}
-              className="category_btn bg-[#1EB91E] w-[100%] text-white text-[14px] font-bold py-[15px] px-[36px] h-[46px]"
-            >
-              {open ? (
-                <CloseSquareOutlined className=" text-[18px]" />
-              ) : (
-                <UnorderedListOutlined className=" text-[18px] rotate-180" />
-              )}
-              {open ? "Bekor qilish" : "Kategoriya"}
-            </Button>
             <Input
               placeholder="Хочу купить..."
               className="search_inputt mt-[5px]"
@@ -336,42 +325,6 @@ function Index() {
             </div>
           </Drawer>
 
-          <Drawer
-            placement="left"
-            title="Category"
-            width={300}
-            onClose={onCategory}
-            open={openCategory}
-          >
-            <Menu
-              mode="inline"
-              style={{ height: "100%", borderRight: 0 }}
-              defaultSelectedKeys={["11"]}
-              openKeys={openKeys}
-              onOpenChange={(keys) => setOpenKeys(keys.slice(-1))}
-            >
-              {categories?.map((category: any, index: number) => {
-                return (
-                  <SubMenu
-                    key={category.id}
-                    title={
-                      <span onClick={() => getSubCategories(category.id)}>
-                        <Icon type="appstore" />
-                        {category.name}
-                      </span>
-                    }
-                  >
-                    {subcategories?.map((subcat: any, subIndex: number) => (
-                      <Menu.Item key={subIndex}>
-                        <Link href={`/categories`}>{subcat.name}</Link>
-                      </Menu.Item>
-                    ))}
-                  </SubMenu>
-                );
-              })}
-            </Menu>
-            ;
-          </Drawer>
         </Container>
       </div>
     </header>
