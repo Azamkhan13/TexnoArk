@@ -221,7 +221,7 @@ function Index() {
                   shape="square"
                   size="large"
                   className="bg-[#F0F0F0] cursor-pointer"
-                  onClick={() => router.push("/likes")}
+                  onClick={() => router.push("/fovourite")}
                 >
                   <HeartOutlined className="text-[20px] text-[black]" />
                 </Avatar>
@@ -235,7 +235,7 @@ function Index() {
                   <BarChartOutlined className="text-[20px] text-[black]" />
                 </Avatar>
               </Badge>
-              <Link href={"/card"} className=" max-lg:hidden">
+              <Link href={"/korzinka"} className=" max-lg:hidden">
                 <Badge count={countCarts}>
                   <Avatar
                     shape="square"
@@ -278,7 +278,6 @@ function Index() {
 
           <Drawer title="Menu" width={300} onClose={onClose} open={openDrawer}>
             <div className="flex items-center gap-[15px]">
-             
               <Badge count={6}>
                 <Avatar
                   shape="square"
@@ -293,12 +292,12 @@ function Index() {
                   shape="square"
                   size="large"
                   className="bg-[#F0F0F0] cursor-pointer"
-                  onClick={() => router.push("/likes")}
+                  onClick={() => router.push("/fovourite")}
                 >
                   <HeartOutlined className="text-[20px] text-[black]" />
                 </Avatar>
               </Badge>
-              <Link href={"/card"}>
+              <Link href={"/korzinka"}>
                 <Badge count={countCarts}>
                   <Avatar
                     shape="square"
@@ -324,7 +323,6 @@ function Index() {
               )}
             </div>
           </Drawer>
-
         </Container>
       </div>
     </header>
